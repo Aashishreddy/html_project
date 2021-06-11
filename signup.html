@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>
+        Registration form
+    </title>
+
+    <style>
+        .form1{
+            margin-left: 100px;
+        }
+    </style>
+    <script src="javascrip.js">
+    </script>
+
+</head>
+
+    <body>
+        <div class="form1"><br><br>
+            <h1> Sign Up</h1><hr><br>
+        <form name="registration" onsubmit="return validateSignup()">
+            <label for="username">Username: </label>  
+                    <input type="text" name="username" id= "username" placeholder="Enter Username" maxlength="15"><br><br>
+            <label for="email">Email: </label>  
+                    <input type="text" name="email" id="email" placeholder="Enter Email" > <br><br>
+            <label for="password" >Password: </label>  
+                    <input type="password" name="password" id="password" placeholder="Enter Password"> 
+                    <p id="pwd">Password should contain one Upper case, one Lower case, one integer and a special character.</p>
+            <label for="password1" >Re-Enter Password: </label>  
+                    <input type="password" name="password1" id="password1" placeholder="Re-Enter Password"> <br><br>
+            <label for="firstname">First Name: </label>    
+                    <input type="text" name="firstname" id="firstname" placeholder="Enter Firstname"> <br><br>
+            <label for="lastname">Last Name:</label>        
+                    <input type="text" name="lastname" id="lastname" placeholder="Enter Lastname"> <br><br>
+            <label for="mobile">Mobile: </label>        
+                    <input type="text" name="mobile" id="mobile" placeholder="Enter Mobile Number" maxlength="10"> <br><br>
+            <input type="submit" value="Submit">
+        </form>
+        </div>
+    </body>
+</html>

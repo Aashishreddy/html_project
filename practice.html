@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function myfunc(){
+                document.getElementById('demo').innerHTML="Aashish";
+            }
+            function checkNumber(){
+                var x = document.getElementById("numb").value;
+                var result= "";
+                if(x > 0){
+                    result = "Positive Number";
+                }
+                else if(x < 0){
+                    result = "Negative Number"
+                }
+                else
+                    result = "Neither Positive nor Negative";
+                document.getElementById("output").innerHTML= result;
+            }
+            function pwdValidation(){
+                password= document.getElementById["validate"]["pwd"].value;
+                console.log(password)
+                var pwdRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+                console.log(pwdRegex);
+                //  var pwdRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");    
+                 if(password.match(pwdRegex)){
+                    return true;
+                }else{
+                    alert("Invalid Password");
+                    return false;
+                }
+            }
+        </script>
+
+    </head>
+<body>
+    <h2>JavaScript in Body</h2>
+    <button onclick="myfunc()">Try</button>
+    <p id="demo"></p>
+
+    <button onclick="this.innerHTML= Date()">Get Time</button><br><br>
+
+    <input type="number" name="numb" id="numb"><br>
+    <button type="button" onclick="return checkNumber()">Check if number is Positive or Negative</button>
+    <p id="output"></p>
+
+    <form name="validate" onsubmit="return pwdValidation()">
+        <input type="text" name="pwd" id= "pwd">
+        <input type="submit">
+    </form>
+    
+
+</body>
+</html> 
